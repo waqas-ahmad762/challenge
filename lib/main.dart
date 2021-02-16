@@ -1,3 +1,4 @@
+import 'package:challenge/appointment.dart';
 import 'package:challenge/bottom_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -60,7 +61,15 @@ class _MyHomePageState extends State<MyHomePage> {
               Icons.calendar_view_day,
               color: Colors.lightBlueAccent,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(
+                new MaterialPageRoute<Null>(
+                  builder: (BuildContext context) {
+                    return Appointment();
+                  },
+                ),
+              );
+            },
           ),
         ],
       ),
